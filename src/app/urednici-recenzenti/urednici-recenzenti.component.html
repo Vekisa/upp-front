@@ -1,0 +1,42 @@
+
+<form [formGroup]="form">
+  <div class="form-group">
+    <label for="urednik1">Urednik 1</label>
+    <select class="form-control" id="urednik1" [formControlName]="'urednik1'">
+      <option>/</option>
+      <option>editor</option>
+      <option>editor1</option>
+      <option>editor2</option>
+      <!--<option *ngFor="let editor of editors">{{editor}}</option>-->
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="urednik2">Urednik 2</label>
+    <select class="form-control" id="urednik2" [formControlName]="'urednik2'">
+      <option>/</option>
+      <option>editor</option>
+      <option>editor1</option>
+      <option>editor2</option>
+      <!--<option *ngFor="let editor of editors">{{editor}}</option>-->
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="recenzent1">Recenzent 1</label>
+    <select class="form-control" id="recenzent1" [formControlName]="'recenzent1'">
+      <option>reviewer1</option>
+      <option>reviewer2</option>
+      <option>reviewer3</option>
+      <!--<option *ngFor="let reviewer of reviewers">{{reviewer}}</option>-->
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="recenzent2">Recenzent 2</label>
+    <select class="form-control" id="recenzent2" [formControlName]="'recenzent2'">
+      <option>reviewer1</option>
+      <option>reviewer2</option>
+      <option>reviewer3</option>
+      <!--<option *ngFor="let reviewer of reviewers">{{reviewer}}</option>-->
+    </select>
+  </div>
+  <button type="submit" class="form-control" (click)="onSubmit()">Save</button>
+</form>

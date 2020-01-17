@@ -1,0 +1,11 @@
+<table class="table table-borderless">
+  <tbody>
+  <tr *ngFor="let request of requests">
+    <th scope="row">1</th>
+    <td>{{request.issn}}</td>
+    <td>{{request.naziv}}</td>
+    <td><button type="button" class="btn btn-success" (click)="accept(request.processId)">Approve</button></td>
+    <td><button type="button" class="btn btn-danger" (click)="decline(request.processId)">Decline</button></td>
+  </tr>
+  </tbody>
+</table>

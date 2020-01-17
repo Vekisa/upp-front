@@ -1,0 +1,31 @@
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">New Magazine</h5>
+<div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value, f)" ngNativeValidate>
+
+    <div *ngFor="let field of formFields" >
+      <label for={{field.id}}>{{field.label}}</label>
+
+      <input type="text" class="form-control" name={{field.id}} ngModel  *ngIf="field.type.name=='string'" >
+      <input type="checkbox" class="form-control" name={{field.id}} ngModel  *ngIf="field.type.name=='boolean'">
+      <input type="number" class="form-control" name={{field.id}} ngModel  *ngIf="field.type.name=='long'">
+      <select name="field.id" *ngIf="field.type.name=='enum'" class="form-control">
+        <option *ngFor="let val of enumValues" value={{val}}>
+          {{field.type.values[val]}}
+        </option>
+      </select>
+    </div>
+
+    <input type="submit">
+  </form>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
