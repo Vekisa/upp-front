@@ -16,6 +16,7 @@ export class AutheticationService {
   authenticate(username, password){
     return this.http.get("http://localhost:8080/process/auth",{headers: {authorization : "Basic " + window.btoa(username + ":" + password)}}).subscribe(data =>{
       const user = new User(username, password);
+      alert(username + " " + password)
       this.userSubject.next(user);
       localStorage.setItem("currentUser", JSON.stringify(user));
       sessionStorage.setItem("authenticatedUser",username);

@@ -1,0 +1,13 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let s of list">
+    <th scope="row">{{s}}</th>
+    <td><button class="btn btn-success" (click)="do(s)" type="submit">Do</button></td>
+  </tr>
+  </tbody>
+</table>

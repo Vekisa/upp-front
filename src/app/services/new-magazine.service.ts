@@ -11,7 +11,7 @@ export class NewMagazineService {
 
    newMagazine(magazine, taskId) {
       return this.httpClient.post("http://localhost:8080/process/post_magazine/".concat(taskId), magazine) as Observable<any>;
-    }
+   }
 
    getScientificAreas(){
       return this.httpClient.get("http://localhost:8080/process/scientific_areas") as Observable<any>;

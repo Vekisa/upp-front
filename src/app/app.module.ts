@@ -16,6 +16,9 @@ import { UredniciRecenzentiComponent } from './urednici-recenzenti/urednici-rece
 import {BasicAuthInterceptor} from "./auth.interceptor"
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RequestsMagazineComponent } from './requests-magazine/requests-magazine.component';
+import { NewLaborComponent } from './new-labor/new-labor.component';
+import { TaskListComponent } from './task-list/task-list.component';
+import { DoComponent } from './do/do.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { RequestsMagazineComponent } from './requests-magazine/requests-magazine
     RequestsComponent,
     NaucneOblastiComponent,
     UredniciRecenzentiComponent,
-    RequestsMagazineComponent
+    RequestsMagazineComponent,
+    NewLaborComponent,
+    TaskListComponent,
+    DoComponent
   ],
   imports: [
     BrowserModule,

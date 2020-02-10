@@ -11,6 +11,10 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getTasks(){
+    return this.httpClient.get("http://localhost:8080/process/processes") as Observable<any>;
+  }
+
   fetchUsers() {
     return this.httpClient.get("http://localhost:8080/user/fetch") as Observable<any>;
   }
